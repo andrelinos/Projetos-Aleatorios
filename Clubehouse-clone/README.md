@@ -6,12 +6,12 @@
 
 ## Techs
 
-[] HTML
-[] SSAS / CSS
+- [x] HTML
+- [x] SSAS / CSS
 
 ## Author 
 
-Andrelino Silva
+**Andrelino Silva**
 
 ### Social Network
 - [Instagram](https://www.instagram.com/andrelinossilva)
