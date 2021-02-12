@@ -1,2 +1,0 @@
-# Projetos-Aleatórios
-Projetos Aleatórios
