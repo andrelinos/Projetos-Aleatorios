@@ -375,10 +375,12 @@ button, label, .hand-over {
 }
 
 #page .house .screen footer .bt-options button {
-  width: 120px;
-  height: 32px;
+  width: 130px;
+  height: 35px;
   border-radius: 30px;
   border: none;
+  color: rgba(255, 0, 0, 0.789);
+  font-weight: bold;
 }
 
 #page .house .screen footer .bt-options .plus,
