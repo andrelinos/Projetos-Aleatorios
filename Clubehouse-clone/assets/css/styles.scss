@@ -2,9 +2,9 @@
   margin: 0;
   padding: 0;
   outline: 0;
+  box-sizing: border-box;
 
   -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
 }
 
 html, body {
@@ -15,10 +15,8 @@ html, body {
   font-family: 'Poppins', sans-serif;
 }
 
-/* INÍCIO - Defaults */
 a {
   text-decoration: none;
-  color: var(--color-primary);
 }
 
 button, label, .hand-over {
@@ -36,13 +34,17 @@ button, label, .hand-over {
   text-align: center;
 }
 
-/* FIM - Defaults */
+#page .house .screen main > div .user {
+  visibility: hidden;
+  transition: visibility 0.2s;
+}
+
 
 #page {
-  width: 1;
+  width: 100%;
   display: flex;
-  align-items: flex-start;
   justify-content: center;
+  align-items: center;
   padding: 30px;
 }
 
@@ -50,29 +52,22 @@ button, label, .hand-over {
   width: 331.908px;
   height: 700px;
   background: #000;
-  border-radius: 33px;
-
   margin: 0;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 33px;
 }
 
 #page .house .screen {
   width: calc(100% - 9px);
   height: calc(100% - 9px);
-  max-height: 100%;
+  max-width: 100%;
   background: #f1efe5;
- // background-image: url('https://picsum.photos/seed/picsum/200/300');
-  background-repeat: no-repeat;
-  background-clip: content-box;
-  background-origin: content-box;
-  background-size: cover;
-  border-radius: 33px;
+  border-radius:  33px;
   padding: 0;
   overflow: hidden;
-
 }
 
 #page .house .screen .top-screen {
@@ -80,7 +75,6 @@ button, label, .hand-over {
   height: 26px;
   display: flex;
   overflow: hidden;
-  // border-bottom: 1px solid rgba(51, 51, 51, 0.274);
 }
 
 #page .house .screen .top-screen .left-dock {
@@ -106,14 +100,14 @@ button, label, .hand-over {
   flex: 2;
   background: #222;
   border-bottom-left-radius: 10px 17px;
-  border-bottom-right-radius: 17px 10px;
+  border-bottom-right-radius: 10px 17px;
   position: relative;
 }
 
 #page .house .screen .top-screen .dock .speaker {
   width: 80px;
   height: 7px;
-  background: rgba(51, 51, 51, 0.524);
+  background: rgba(51, 51, 51, 0.5);
   position: absolute;
   top: 5px;
   left: 25px;
@@ -123,12 +117,11 @@ button, label, .hand-over {
 #page .house .screen .top-screen .dock .camera {
   width: 10px;
   height: 10px;
-  background: rgba(34, 34, 34, 0.972);
+  background: rgba(34, 34, 34, 0.9);
   background-image: radial-gradient(ellipse farthest-corner at 10px 10px , #222 0%, rgba(0, 0, 255, 0) 0%, #333 50%);
-
   position: absolute;
   top: 4px;
-  right: 20px;
+  left: 20px;
   border-radius: 50%;
 }
 
@@ -137,8 +130,8 @@ button, label, .hand-over {
   height: 100%;
   flex: 1;
   display: flex;
-  padding: 5px 0 0 5px;
   align-items: center;
+  padding: 5px 0 0 5px;
 }
 
 #page .house .screen .top-screen .right-dock img {
@@ -147,7 +140,7 @@ button, label, .hand-over {
   margin-left: 5px;
 }
 
-#page .house .screen .top-screen .right-dock  .battery  {
+#page .house .screen .top-screen .right-dock .battery {
   transform: rotate(90deg);
   margin-bottom: 3px;
   margin-left: 3px;
@@ -167,14 +160,11 @@ button, label, .hand-over {
   height: 525px;
   background: #fff;
   overflow: auto;
-  border-radius: 32px 32px 0 0;
-  padding: 16px;
-  margin-top: 24px;
-}
-
-#page .house .screen main {
+  border-radius: 32px 32px 0 0 ;
   -ms-overflow-style: none;
-  scrollbar-width: none;  
+  scrollbar-width: none;
+  overflow-x: hidden;
+  padding: 24px;
 }
 
 #page .house .screen main::-webkit-scrollbar {
@@ -190,25 +180,19 @@ button, label, .hand-over {
   height: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-content: flex-start;
   flex-wrap: wrap;
+  align-self: flex-start;
 }
 
 #page .house .screen main > div .user {
-  width: 100px;
+  width: 80px;
   height: 85px;
-  margin: 8px;
+  margin: 8px 3px;
   overflow: hidden;
   display: flex;
-}
-
-#page .house .screen main > div .user {
-  width: 25%;
-  height: 100px;
-  display: flex;
-  flex-direction: columns;
   position: relative;
-  margin-top: 16px;
+  visibility: visible;
 }
 
 #page .house .screen main > div .user .avatar {
@@ -216,13 +200,10 @@ button, label, .hand-over {
   height: 65px;
   border-radius: 50%;
   overflow: hidden;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   margin: 0 auto;
-
   position: absolute;
   top: 1px;
   left: calc(50% - 32.5px);
@@ -243,27 +224,23 @@ button, label, .hand-over {
 }
 
 #page .house .screen main > div .user > .fun, 
-#page .house .screen main > div .user > .mic 
-{
+#page .house .screen main > div .user > .mic {
   width: 25px;
   height: 25px;
   position: absolute;
   background: #fff;
   border-radius: 50%;
-
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} 
 
-#page .house .screen main > div .user > .fun
-{
+#page .house .screen main > div .user > .fun {
   top: 38px;
   left: 1px;
 }
 
-#page .house .screen main > div .user > .mic
-{
+#page .house .screen main > div .user > .mic {
   top: 38px;
   right: 1px;
 }

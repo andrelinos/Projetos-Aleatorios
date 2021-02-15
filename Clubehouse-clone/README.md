@@ -9,6 +9,10 @@
 - [x] HTML
 - [x] SSAS / CSS
 
+## Como rodar o projeto
+
+- 
+
 ## Author 
 
 **Andrelino Silva**
@@ -20,3 +24,7 @@
 - [Facebook](https://www.youtube.com/c/AndrelinoSilvas)
 - [Github](https://github.com/andrelinos)
 - [Website](https://www.andrelinosilva.com.br/)
+
+## Sobre
+
+Projeto baseado no projeto do grande Mayk Brito que pode ser acessado [aqui](https://github.com/maykbrito/clone-clubhouse). 
